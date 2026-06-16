@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator - BoardBuddy</title>
+    
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f9f9; }
+        header { background-color: #1a252c; color: white; padding: 15px 20px; text-align: center; }
+        .container { padding: 20px; max-width: 800px; margin: 0 auto; }
+        
+        .back-btn {
+            display: inline-block; margin-bottom: 20px; padding: 10px 15px;
+            background-color: #2980b9; color: white; text-decoration: none;
+            border-radius: 5px; font-weight: bold;
+        }
+
+        h1 { color: #1a252c; text-align: center; }
+
+        .calculator-box {
+            background-color: white; padding: 30px; border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 400px;
+            margin: 0 auto; text-align: center;
+        }
+
+        input {
+            width: 80%; padding: 12px; margin: 10px 0;
+            border: 2px solid #ddd; border-radius: 5px; font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block; margin-top: 15px; padding: 12px 25px;
+            background-color: #f1c40f; color: #333; border: none;
+            cursor: pointer; font-size: 16px; font-weight: bold;
+            border-radius: 5px; width: 85%;
+        }
+
+        .result {
+            font-size: 18px; font-weight: bold; color: #2980b9;
+            margin-top: 20px; min-height: 30px; white-space: pre-line; /* Allows line breaks */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>BoardBuddy</h2>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+        <h1>📅 Attendance Calculator</h1>
+        
+        <div class="calculator-box">
+            <p>Find out how many days you need to go to reach your goal!</p>
+            
+            <input type="number" id="totalDays" placeholder="Total Working Days (e.g. 100)">
+            <input type="number" id="attendedDays" placeholder="Days Attended (e.g. 60)">
+            <input type="number" id="target" placeholder="Target % (e.g. 75)" value="75">
+            
+            <button class="btn" onclick="calculateAttendance()">Calculate</button>
+            
+            <div class="result" id="resultDisplay"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateAttendance() {
+            // 1. Get the values from the inputs
+            let total = parseFloat(document.getElementById("totalDays").value);
+            let attended = parseFloat(document.getElementById("attendedDays").value);
+            let target = parseFloat(document.getElementById("target").value);
+            let displayArea = document.getElementById("resultDisplay");
+            
+            // 2. Error checking (empty boxes or silly numbers)
+            if (isNaN(total) || isNaN(attended) || isNaN(target) || total <= 0) {
+                displayArea.style.color = "red";
+                displayArea.innerText = "Please enter valid numbers in all boxes!";
+                return;
+            }
+            if (attended > total) {
+                displayArea.style.color = "red";
+                displayArea.innerText = "You can't attend more days than the total!";
+                return;
+            }
+            
+            // 3. Calculate current percentage
+            let currentPercent = (attended / total) * 100;
+            
+            // 4. Figure out the final message
+            if (currentPercent >= target) {
+                displayArea.style.color = "green";
+                displayArea.innerText = "Current: " + currentPercent.toFixed(1) + "%\nYou are safe! Enjoy your day off. 😎";
+            } else {
+                // The math to find required days
+                let requiredDays = Math.ceil((target * total - 100 * attended) / (100 - target));
+                displayArea.style.color = "#2980b9";
+                displayArea.innerText = "Current: " + currentPercent.toFixed(1) + "%\nYou need to attend " + requiredDays + " more consecutive days to reach " + target + "%.";
+            }
+        }
+    </script>
+</body>
+</html>

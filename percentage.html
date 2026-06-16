@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator - BoardBuddy</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9f9; 
+        }
+
+        header {
+            background-color: #1a252c; 
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #1a252c;
+            text-align: center;
+        }
+
+        /* Styling the Calculator Box */
+        .calculator-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto; /* Centers the box */
+            text-align: center;
+        }
+
+        /* Styling the input fields where users type */
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #f1c40f; 
+            color: #333;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 85%;
+        }
+
+        /* Where the final answer shows up */
+        .result {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2980b9;
+            margin-top: 20px;
+            min-height: 30px; /* Keeps space empty before calculating */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>BoardBuddy</h2>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+        <h1>💯 Percentage Calculator</h1>
+        
+        <div class="calculator-box">
+            <p>Enter your marks to find your exact board percentage!</p>
+            
+            <input type="number" id="obtainedMarks" placeholder="Total Marks Obtained (e.g. 420)">
+            <input type="number" id="totalMarks" placeholder="Maximum Marks (e.g. 500)">
+            
+            <button class="btn" onclick="calculatePercentage()">Calculate</button>
+            
+            <div class="result" id="resultDisplay"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculatePercentage() {
+            // 1. Grab the numbers the user typed into the input boxes
+            let obtained = document.getElementById("obtainedMarks").value;
+            let total = document.getElementById("totalMarks").value;
+            let displayArea = document.getElementById("resultDisplay");
+            
+            // 2. Check if the boxes are empty to prevent errors
+            if (obtained === "" || total === "") {
+                displayArea.style.color = "red";
+                displayArea.innerText = "Please enter both numbers!";
+                return; /* Stops the code from running further */
+            }
+            
+            // 3. Do the math: (Obtained / Total) * 100
+            let percentage = (obtained / total) * 100;
+            
+            // 4. Show the result on the screen, rounded to 2 decimal places
+            displayArea.style.color = "#2980b9";
+            displayArea.innerText = "Your Percentage: " + percentage.toFixed(2) + "%";
+        }
+    </script>
+</body>
+</html>
