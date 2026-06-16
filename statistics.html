@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 Maths Chapter 13 Statistics Notes & NCERT Solutions - BoardBuddy</title>
+    <meta name="description" content="Get complete CBSE Class 10 Maths Chapter 13 Statistics notes. Learn formulas for Mean, Median, and Mode of grouped data, and find step-by-step NCERT solutions.">
+    <meta name="keywords" content="Class 10 Statistics Notes, Mean of Grouped Data, Median Formula, Mode Formula, Empirical Relationship Statistics, NCERT Solutions Chapter 13 Maths">
+
+    <style>
+        :root {
+            --primary-color: #1a252c;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: var(--bg-color); line-height: 1.7; color: var(--text-color); }
+        header { background-color: var(--primary-color); color: white; padding: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .container { padding: 20px; max-width: 850px; margin: 0 auto; }
+        .back-btn { display: inline-block; margin-bottom: 25px; padding: 10px 18px; background-color: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        h1 { color: var(--primary-color); font-size: 28px; border-bottom: 3px solid var(--secondary-color); padding-bottom: 10px; }
+        h2 { color: var(--secondary-color); margin-top: 35px; font-size: 22px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .hub-menu { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0; justify-content: center; }
+        .hub-btn { flex: 1; min-width: 150px; text-align: center; padding: 12px 15px; background-color: var(--card-bg); color: var(--secondary-color); text-decoration: none; border: 2px solid var(--secondary-color); border-radius: 8px; font-weight: bold; }
+        .hub-btn:hover { background-color: var(--secondary-color); color: white; }
+        
+        .formula-box { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 18px; margin: 25px 0; border-radius: 6px; }
+        .pyq-box { background-color: #e8f4fd; border-left: 6px solid var(--secondary-color); padding: 18px; margin: 25px 0; border-radius: 6px; }
+        .pyq-badge { background-color: var(--accent-color); color: white; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+        .ncert-section { background-color: var(--card-bg); border: 1px solid #e0e0e0; border-radius: 8px; margin: 15px 0; padding: 15px; }
+        .exercise-title { color: var(--primary-color); font-weight: bold; font-size: 20px; margin-bottom: 15px; }
+        .solution-box { border-bottom: 1px dashed #ddd; padding: 15px 0; }
+        .question-text { font-weight: 600; color: #2c3e50; margin-bottom: 8px; }
+        .answer-steps { background-color: #f9f9f9; padding: 12px 15px; border-radius: 5px; border-left: 3px solid #2ecc71; margin-top: 8px; }
+        .step { margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="font-size: 24px; font-weight: bold;">📚 BoardBuddy</div>
+    </header>
+
+    <div class="container">
+        <a href="maths.html" class="back-btn">⬅ Back to Maths Index</a>
+
+        <h1>CBSE Class 10 Maths Chapter 13: Statistics Notes</h1>
+        
+        <div class="hub-menu">
+            <a href="#quick-notes" class="hub-btn">📖 Chapter Notes</a>
+            <a href="#ncert-sol" class="hub-btn">✏️ NCERT Solutions</a>
+            <a href="#" class="hub-btn" style="border-color: var(--accent-color); color: var(--accent-color);">📥 PDF Notes</a>
+        </div>
+
+        <div id="quick-notes">
+            <h2>1. Mean of Grouped Data (Direct Method)</h2>
+            <p>The Mean (average) of grouped frequency distribution data using the standard Direct Method is calculated as:</p>
+            <div class="formula-box" style="text-align: center; font-weight: bold; font-size: 18px;">
+                $$\bar{x} = \frac{\sum f_i x_i}{\sum f_i}$$
+            </div>
+            <p style="font-size: 14px; text-align: center; color: #555;">Where $x_i = \text{class mark} = \frac{\text{Upper Limit} + \text{Lower Limit}}{2}$, and $f_i = \text{frequency}$.</p>
+
+            <h2>2. Mode of Grouped Data</h2>
+            <p>The Mode represents the value that appears most frequently. For grouped data, find the <b>Modal Class</b> (the class interval with the highest frequency) and use:</p>
+            <div class="formula-box" style="text-align: center; font-weight: bold; font-size: 18px;">
+                $$\text{Mode} = l + \left( \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \right) \times h$$
+            </div>
+            <p style="font-size: 14px; color: #555;">
+                • $l = \text{lower limit of modal class}$<br>
+                • $f_1 = \text{frequency of modal class}$<br>
+                • $f_0 = \text{frequency of preceding class}$<br>
+                • $f_2 = \text{frequency of succeeding class}$<br>
+                • $h = \text{class interval width}$
+            </p>
+
+            <h2>3. Median of Grouped Data</h2>
+            <p>The Median represents the middle-most score. Find the <b>Median Class</b> where the cumulative frequency ($cf$) crosses the value of $N/2$:</p>
+            <div class="formula-box" style="text-align: center; font-weight: bold; font-size: 18px;">
+                $$\text{Median} = l + \left( \frac{\frac{N}{2} - cf}{f} \right) \times h$$
+            </div>
+
+            <div class="pyq-box">
+                <span class="pyq-badge">CBSE MCQ Lifesaver Rule</span>
+                <p><b>Empirical Relationship Formula:</b> If a 1-mark question gives you any two parameters out of mean, median, or mode and asks for the third, do not calculate tables! Just use this golden rule:<br>
+                <b style="color: var(--accent-color); font-size: 18px;">$$3 \times \text{Median} = \text{Mode} + 2 \times \text{Mean}$$</b></p>
+            </div>
+        </div>
+
+        <hr style="border: 0; height: 1px; background: #ddd; margin: 40px 0;">
+
+        <div id="ncert-sol">
+            <h2>✏️ Complete NCERT Solutions Class 10 Statistics</h2>
+
+            <div class="ncert-section">
+                <div class="exercise-title">Exercise 13.1</div>
+
+                <div class="solution-box">
+                    <div class="question-text">Q1. Given $\sum f_i x_i = 132$ and $\sum f_i = 20$ for a dataset, calculate the Mean.</div>
+                    <div class="answer-steps">
+                        <div class="step"><b>Step 1: Set up the direct method formula</b><br>$\bar{x} = \frac{\sum f_i x_i}{\sum f_i}$</div>
+                        <div class="step"><b>Step 2: Substitute and compute</b><br>$\bar{x} = \frac{132}{20} = \mathbf{6.6}$</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

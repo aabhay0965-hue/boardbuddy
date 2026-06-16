@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 Maths Chapter 2 Polynomials Notes & NCERT Solutions - BoardBuddy</title>
+    <meta name="description" content="Best CBSE Class 10 Maths Chapter 2 Polynomials notes. Find quadratic polynomial formulas, zeroes verification, and detailed step-by-step NCERT solutions.">
+    <meta name="keywords" content="Class 10 Polynomials Notes, Polynomials NCERT Solutions, Quadratic Polynomial Formula, Relationship between zeroes and coefficients">
+
+    <style>
+        :root {
+            --primary-color: #1a252c;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: var(--bg-color); line-height: 1.7; color: var(--text-color); }
+        header { background-color: var(--primary-color); color: white; padding: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .container { padding: 20px; max-width: 850px; margin: 0 auto; }
+        .back-btn { display: inline-block; margin-bottom: 25px; padding: 10px 18px; background-color: var(--secondary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        h1 { color: var(--primary-color); font-size: 28px; border-bottom: 3px solid var(--secondary-color); padding-bottom: 10px; }
+        h2 { color: var(--secondary-color); margin-top: 35px; font-size: 22px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .hub-menu { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0; justify-content: center; }
+        .hub-btn { flex: 1; min-width: 150px; text-align: center; padding: 12px 15px; background-color: var(--card-bg); color: var(--secondary-color); text-decoration: none; border: 2px solid var(--secondary-color); border-radius: 8px; font-weight: bold; }
+        .hub-btn:hover { background-color: var(--secondary-color); color: white; }
+        .formula-box { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 18px; margin: 25px 0; border-radius: 6px; font-weight: bold; font-size: 18px; text-align: center; }
+        .pyq-box { background-color: #e8f4fd; border-left: 6px solid var(--secondary-color); padding: 18px; margin: 25px 0; border-radius: 6px; }
+        .pyq-badge { background-color: var(--accent-color); color: white; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+        .ncert-section { background-color: var(--card-bg); border: 1px solid #e0e0e0; border-radius: 8px; margin: 15px 0; padding: 15px; }
+        .exercise-title { color: var(--primary-color); font-weight: bold; font-size: 20px; margin-bottom: 15px; }
+        .solution-box { border-bottom: 1px dashed #ddd; padding: 15px 0; }
+        .question-text { font-weight: 600; color: #2c3e50; margin-bottom: 8px; }
+        .answer-steps { background-color: #f9f9f9; padding: 12px 15px; border-radius: 5px; border-left: 3px solid #2ecc71; margin-top: 8px; }
+        .step { margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="font-size: 24px; font-weight: bold;">📚 BoardBuddy</div>
+    </header>
+
+    <div class="container">
+        <a href="maths.html" class="back-btn">⬅ Back to Maths Index</a>
+
+        <h1>CBSE Class 10 Maths Chapter 2: Polynomials Notes</h1>
+        
+        <div class="hub-menu">
+            <a href="#quick-notes" class="hub-btn">📖 Chapter Notes</a>
+            <a href="#ncert-sol" class="hub-btn">✏️ NCERT Solutions</a>
+            <a href="#" class="hub-btn" style="border-color: var(--accent-color); color: var(--accent-color);">📥 PDF Notes</a>
+        </div>
+
+        <div id="quick-notes">
+            <h2>1. What is a Polynomial?</h2>
+            <p>An algebraic expression where the exponents of the variables are strictly **whole numbers**. The highest power of the variable in a polynomial is called its <b>degree</b>.</p>
+            <ul>
+                <li><b>Linear Polynomial:</b> Degree = 1 (e.g., $2x + 3$)</li>
+                <li><b>Quadratic Polynomial:</b> Degree = 2 (e.g., $ax^2 + bx + c$)</li>
+                <li><b>Cubic Polynomial:</b> Degree = 3 (e.g., $ax^3 + bx^2 + cx + d$)</li>
+            </ul>
+
+            <h2>2. Geometrical Meaning of Zeroes</h2>
+            <p>The number of zeroes of a polynomial $p(x)$ is exactly equal to the number of times its graph intersects or touches the <b>X-axis</b>.</p>
+
+            <h2>3. Relationship Between Zeroes and Coefficients</h2>
+            <p>If $\alpha$ and $\beta$ are the zeroes of a quadratic polynomial $p(x) = ax^2 + bx + c$, then:</p>
+            
+            <div class="formula-box">
+                👉 Sum of Zeroes ($\alpha + \beta$) = $-b/a = -\frac{\text{Coefficient of } x}{\text{Coefficient of } x^2}$<br><br>
+                👉 Product of Zeroes ($\alpha \cdot \beta$) = $c/a = \frac{\text{Constant term}}{\text{Coefficient of } x^2}$
+            </div>
+
+            <div class="pyq-box">
+                <span class="pyq-badge">CBSE Board Favorite Question</span>
+                <p><b>Forming a Polynomial:</b> If sum and product of zeroes are given, the quadratic polynomial is written as:<br>
+                $$p(x) = k[x^2 - (\text{Sum of Zeroes})x + (\text{Product of Zeroes})]$$</p>
+            </div>
+        </div>
+
+        <hr style="border: 0; height: 1px; background: #ddd; margin: 40px 0;">
+
+        <div id="ncert-sol">
+            <h2>✏️ Complete NCERT Solutions Class 10 Polynomials</h2>
+
+            <div class="ncert-section">
+                <div class="exercise-title">Exercise 2.1</div>
+                <div class="solution-box">
+                    <div class="question-text">Q1. The graphs of $y = p(x)$ are given. Find the number of zeroes of $p(x)$ in each case.</div>
+                    <div class="answer-steps">
+                        <div class="step"><b>Rule:</b> Count how many times the line crosses the horizontal X-axis line.</div>
+                        <div class="step">1. If the graph is parallel to the X-axis (does not touch it): <b>0 zeroes</b>.</div>
+                        <div class="step">2. If the graph intersects the X-axis at exactly one point: <b>1 zero</b>.</div>
+                        <div class="step">3. If it intersects at three points: <b>3 zeroes</b>.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ncert-section">
+                <div class="exercise-title">Exercise 2.2</div>
+                <div class="solution-box">
+                    <div class="question-text">Q1. Find the zeroes of the quadratic polynomial $x^2 - 2x - 8$ and verify the relationship with coefficients.</div>
+                    <div class="answer-steps">
+                        <div class="step"><b>Step 1: Factorize by splitting middle term</b><br> $x^2 - 4x + 2x - 8 = 0$<br> $x(x - 4) + 2(x - 4) = 0$<br> $(x - 4)(x + 2) = 0 \implies \mathbf{\alpha = 4, \beta = -2}$</div>
+                        <div class="step"><b>Step 2: Verify Sum</b><br> $\alpha + \beta = 4 + (-2) = 2$<br> From equation, $-b/a = -(-2)/1 = 2$. (Verified!)</div>
+                        <div class="step"><b>Step 3: Verify Product</b><br> $\alpha \cdot \beta = 4 \times (-2) = -8$<br> From equation, $c/a = -8/1 = -8$. (Verified!)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
